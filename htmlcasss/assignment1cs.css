@@ -1,0 +1,41 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+body,html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+#square1{
+    border-style: dotted;
+    background-color: aqua;
+    width: 200px;
+    height: 200px;
+}
+
+#square2{
+    border-style: dotted;
+    width: 200px;
+    background-color: rgb(232, 211, 16);
+    height: 200px;
+}
+
+
+#square3{
+    border-style: dotted;
+    width: 200px;
+    background-color: bisque;
+    height: 200px;
+}
+main{
+    display: flex;
+
+}
