@@ -14,24 +14,49 @@ body{
     justify-content: center;
 }
 
-#square{
-    background-color:bisque;
-    border-style: groove;
-    width: 200px;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#circle{
-    background-color: antiquewhite;
-    border-style: groove;
-    border-radius: 50%;
-    margin: 50px;
-    width: 200px;
+.Shapes{
+   width: 200px;
     height: 200px;
      display: flex;
     align-items: center;
     justify-content: center;
+    background-color:bisque;
+}
+
+#square{
+    border-style: groove;
+}
+
+#square:hover{
+    background-color: aqua;
+}
+
+#circle:hover{
+    background-color: rgb(212, 22, 22);
+}
+
+#triangle:hover{
+    background-color: blue;
+
+
+}
+
+#circle{
+    border-style: groove;
+    border-radius: 50%;
+    margin: 50px;
+   
+}
+
+#triangle{
+    margin-top: 50px;
+    rotate: 45deg;
+    border: 1px solid ;
+        width: 141px;
+    height: 141px;
+    translate: 40px;
+}
+
+#triangle h1{
+    rotate: -45deg;
 }
