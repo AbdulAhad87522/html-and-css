@@ -30,4 +30,35 @@ h1{
     align-items: center;
     justify-content: center;
     margin-top: 20px;
+
+}
+
+#circle{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+}
+
+#one {
+    transition: transform 200ms ease;
+}
+
+#one:hover {
+    transform: scale(1.2);
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4); 
+}
+
+
+#extr
+{
+    transition: transform 200ms ease-in-out;
+}
+
+#extr:hover{
+    transform:scale(1.1);
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgb(181, 36, 36);
 }

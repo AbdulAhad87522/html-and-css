@@ -7,9 +7,18 @@ y.addEventListener("mouseenter", function(){
     y.innerHTML = Math.floor(Math.random()*100);
 })
 
+y.addEventListener("dblclick", function(){
+ zr1 = Math.floor(Math.random()*257);
+    zr2 = Math.floor(Math.random()*257);
+    zr3 = Math.floor(Math.random()*257);
+
+    y.style.backgroundColor = `rgb(${zr1}, ${zr2}, 255)`;})
+
 y.addEventListener("mouseleave", function(){
     y.innerHTML = "2"
+    // y.style.backgroundColor = "white"
 })
+
 
 let clr = "red"
 x.addEventListener("mouseenter", function(){
@@ -30,7 +39,7 @@ x.addEventListener("mouseleave", function(){
 })  
 
 z.addEventListener("mouseenter",function(){
-        r1 = Math.floor(Math.random()*257);
+    r1 = Math.floor(Math.random()*257);
     r2 = Math.floor(Math.random()*257);
     r3 = Math.floor(Math.random()*257);
 
@@ -48,17 +57,7 @@ a.addEventListener("click",function(){
     zr3 = Math.floor(Math.random()*257);
 
     z.style.backgroundColor = `rgb(${zr1}, ${zr2}, 255)`;
-
-    // yr1 = Math.floor(Math.random()*257);
-    // yr2 = Math.floor(Math.random()*257);
-    // yr3 = Math.floor(Math.random()*257);
-
     y.style.backgroundColor = `rgb(255, ${zr2}, ${zr3})`;
-
-    // xr1 = Math.floor(Math.random()*257);
-    // xr2 = Math.floor(Math.random()*257);
-    // xr3 = Math.floor(Math.random()*257);
-
     x.style.backgroundColor = `rgb(${zr1}, 255, ${zr3})`;
 })
 
@@ -67,3 +66,10 @@ a.addEventListener("mouseleave", function(){
     y.style.backgroundColor = "white"
     x.style.backgroundColor = "white"
 })  
+
+let main = document.getElementById("main")
+let crsr = document.getElementById("circle");
+main.addEventListener("mousemove", function(details){
+    crsr.style.left = details.x +"px";
+    crsr.style.top = details.y +"px";
+})
