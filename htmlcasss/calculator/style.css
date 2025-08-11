@@ -1,0 +1,91 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgb(13, 1, 1);
+    justify-content: center;
+}
+
+#main{
+    border: 1px solid black;
+    width: 25%;
+    height: 75%;
+    background-color: rgb(236, 155, 14);
+    border-radius: 10px;
+}
+
+.buttons{
+    width: 75px;
+    height: 51px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    background-color: rgb(228, 238, 246);
+    margin-left: 2px;
+    border-radius: 4px;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.buttons:hover{
+    box-shadow: 0px 10px 50px rgb(13, 11, 11);
+    background-color: aliceblue;
+}
+
+#buttonsdiv{
+    /* margin-top: 140.7px; */
+    border: 1px solid black;
+    width: 100%;
+    height: 70%;
+    flex-wrap: wrap;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+#numbers {
+    border: 1px solid black;
+    width: 90%;
+    height: 40px; /* standard height for input */
+    background-color: white; /* normal text box look */
+    font-size: 18px;
+    padding: 5px;
+    margin: 12px auto; /* center inside main */
+    display: block;
+    border-radius: 5px;
+}
+
+#answers{
+     border: 1px solid black;
+    width: 90%;
+    height: 40px; /* standard height for input */
+    background-color: white; /* normal text box look */
+    font-size: 18px;
+    padding: 5px;
+    margin: 12px auto; /* center inside main */
+    display: block;
+    border-radius: 5px;
+}
+
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px 10px;
+    font-weight: bold;
+    color: white;
+}
