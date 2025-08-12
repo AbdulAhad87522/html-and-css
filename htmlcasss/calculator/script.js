@@ -61,24 +61,56 @@ zero.addEventListener("click" ,function(){
     input.value += "0"
 })
 
-plus.addEventListener("click" ,function(){
-    input.value += "+"
-  livePreview();
-})
+// plus.addEventListener("click" ,function(){
+//     input.value += "+"
+//   livePreview();
+// })
 
-minus.addEventListener("click" ,function(){
+// plus.addEventListener("click", function(){
+//     answers.value = addNumbers(input.value);
+//     input.value += "+";
+// });
+
+
+plus.addEventListener("click", function(){
+    answers.value = calculation(input.value);
+    input.value += "+";
+});
+
+
+// minus.addEventListener("click" ,function(){
+//     input.value += "-"
+//      livePreview();
+// })
+
+// minus.addEventListener("click",function(){
+//     answers.value = minusnumbers(input.value);
+//     input.value += "-"
+// })
+
+minus.addEventListener("click",function(){
+    answers.value = calculation(input.value);
     input.value += "-"
-     livePreview();
 })
 
-multiply.addEventListener("click" ,function(){
+// multiply.addEventListener("click" ,function(){
+//     input.value += "*"
+//     livePreview();
+// })
+
+multiply.addEventListener("click",function(){
+    answers.value = calculation(input.value);
     input.value += "*"
-    livePreview();
 })
 
-divide.addEventListener("click" ,function(){
+// divide.addEventListener("click" ,function(){
+//     input.value += "/"
+//      livePreview();
+// })
+
+divide.addEventListener("click",function(){
+    answers.value = calculation(input.value);
     input.value += "/"
-     livePreview();
 })
 
 leftbracket.addEventListener("click", function(){
@@ -95,6 +127,7 @@ point.addEventListener("click", function(){
 
 clear.addEventListener("click", function(){
     input.value = "";
+    answers.value = "";
 })
 
 // backspacce.addEventListener("click", function(){
@@ -133,4 +166,235 @@ function livePreview() {
     } catch {
         answers.value = "error";
     }
+}
+
+function addNumbers(expression) {
+    let number = 0;      // current number being read
+    let total = 0;       // running sum
+
+    for (let i = 0; i < expression.length; i++) {
+        let ch = expression[i];
+
+        // if it's a digit
+        if (ch >= '0' && ch <= '9') {
+            number = number * 10 + (ch - '0'); // build the number
+        }
+
+        // if it's a plus sign
+        else if (ch === '+') {
+            total = total + number; // add current number to total
+            number = 0; // reset number
+        }
+    }
+
+    // add last number after loop ends
+    total = total + number;
+
+    return total;
+}
+
+
+function minusnumbers(expression){
+    let number = 0;
+    let total = 0;
+    let isfirstnumber = true;
+    for(let i = 0 ; i < expression.length ; i++)
+    {
+        let ch = expression[i];
+        if(ch > '0' && ch < '9')
+        {
+            number = number * 10 -(ch -'0')
+        }
+
+        else if(ch === '-')
+        {
+            if(isfirstnumber)
+            {
+                total = number;
+                isfirstnumber = false;
+            }
+            else
+            {
+            total = total - number;
+        }         
+        number = 0;   
+        }
+    }
+    if(isfirstnumber)
+    {
+        total = number;
+    }
+    else
+    {
+        total = total - number;
+    }
+    return total;
+}
+
+// function calculation(expression)
+// {
+//     let numbers = 0;
+//     let total = 0;
+//     let firstnumber = true;
+//     for(let i= 0 ; i < expression.length ; i++)
+//     {
+//         let ch = expression[i];
+//         if(ch > '0' && ch <= '9')
+//         {
+//             numbers = (numbers * 10) + (ch - '0')
+//         }
+//         else
+//         {
+//             if(ch === '+')
+//             {
+//                 if(firstnumber)
+//                 {
+//                     total = numbers;
+//                     firstnumber = false;
+//                 }
+//                 else{
+//                 total = total + numbers;}
+//             }
+//             else if(ch === '-')
+//             {
+//                 if(firstnumber)
+//                 {
+//                     total = numbers;
+//                     firstnumber = false;
+//                 }
+//                 else
+//                 {
+//                 total = total - numbers;}
+//             }
+//             else if(ch === '*')
+//             {
+//                 if(firstnumber)
+//                 {
+//                     total = numbers;
+//                     firstnumber = false;
+//                 }
+//                 else
+//                 {
+//                     total = total * numbers;
+//                 }
+//             }
+//             else if(ch === '/')
+//             {
+//                 if(firstnumber)
+//                 {
+//                     total = numbers;
+//                     firstnumber = false;
+//                 }
+//                 else
+//                 {
+//                     total = total / numbers;
+//                 }
+//             }
+//             numbers = 0
+//         }
+//     }
+//      if(isfirstnumber)
+//     {
+//         total = numbers;
+//     }
+//     else
+//     {
+//         total = total - numbers;
+//     }
+//     return total;
+// }
+
+// function calculation(expression) {
+//     let numbers = 0;
+//     let total = 0;
+//     let firstnumber = true;
+//     let currentOp = '+'; // Start assuming we add first number
+
+//     for (let i = 0; i < expression.length; i++) {
+//         let ch = expression[i];
+
+//         // Build the number
+//         if (ch >= '0' && ch <= '9') {
+//             numbers = (numbers * 10) + (ch - '0');
+//         }
+//         // If it's an operator or end of expression
+//         if (ch === '+' || ch === '-' || ch === '*' || ch === '/' || i === expression.length - 1) {
+            
+//             // If last character is digit, we still process the number
+//             if (i === expression.length - 1 && ch >= '0' && ch <= '9') {
+//                 // do nothing special, number already built
+//             }
+
+//             if (firstnumber) {
+//                 total = numbers;
+//                 firstnumber = false;
+//             } else {
+//                 if (currentOp === '+') total = total + numbers;
+//                 else if (currentOp === '-') total = total - numbers;
+//                 else if (currentOp === '*') total = total * numbers;
+//                 else if (currentOp === '/') total = total / numbers;
+//             }
+
+//             currentOp = ch; // remember current operator
+//             numbers = 0; // reset number builder
+//         }
+//     }
+
+//     return total;
+// }
+
+
+function calculation(expression) {
+  if (!expression) return 0;
+
+  let total = 0;        // running result
+  let num = 0;          // number being built
+  let op = '+';         // pending operator (apply op to num)
+  let isDecimal = false;
+  let decDiv = 1;       // decimal divisor (10,100, ...)
+
+  for (let i = 0; i < expression.length; i++) {
+    let ch = expression[i];
+
+    // build digit (0-9)
+    if (ch >= '0' && ch <= '9') {
+      let digit = ch.charCodeAt(0) - 48;
+      if (!isDecimal) {
+        num = num * 10 + digit;
+      } else {
+        decDiv *= 10;
+        num = num + digit / decDiv;
+      }
+    }
+    // decimal point
+    else if (ch === '.') {
+      if (!isDecimal) {
+        isDecimal = true;
+        decDiv = 1;
+      }
+      // if multiple dots appear, ignore extras
+    }
+    // operator encountered -> apply pending op, reset num
+    else if (ch === '+' || ch === '-' || ch === '*' || ch === '/') {
+      if (op === '+') total = total + num;
+      else if (op === '-') total = total - num;
+      else if (op === '*') total = total * num;
+      else if (op === '/') total = total / num;
+
+      // set new operator and reset for next number
+      op = ch;
+      num = 0;
+      isDecimal = false;
+      decDiv = 1;
+    }
+    // ignore any other characters (or you can return error)
+  }
+
+  // apply last pending number
+  if (op === '+') total = total + num;
+  else if (op === '-') total = total - num;
+  else if (op === '*') total = total * num;
+  else if (op === '/') total = total / num;
+
+  return total;
 }
