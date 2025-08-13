@@ -1,0 +1,37 @@
+    body {
+    font-family: monospace;
+    background: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    }
+
+    .chat-container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+
+    #prompt {
+    width: 100%;
+    height: 150px;
+    }
+
+    #sendBtn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    }
+
+    #response {
+    background: #eee;
+    margin-top: 20px;
+    padding: 10px;
+    white-space: pre-wrap;
+    border-radius: 4px;
+    }

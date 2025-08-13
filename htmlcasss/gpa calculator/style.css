@@ -1,0 +1,184 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(17, 118, 206);
+}
+
+#mianheading{
+    width: 100%;
+    height: 25%;
+    border: 1px solid rgb(17, 118, 206);
+    background-color: antiquewhite;
+}
+
+#mianheading h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+#mianheading h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#calcultiondiv{
+    height: 75%;
+    width: 100%;
+    border: 1px solid black;
+    background-color: aquamarine;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+#maindiv{
+    height: 45%;
+    width: 70%;
+    border: 1px solid rgb(233, 76, 76);
+    margin-top: 90px;
+    margin-left: 200px;
+    border-radius: 20px;    
+}
+
+#input{
+    /* background-color: aliceblue; */
+    height: 40%;
+}
+
+#butcontainer{
+    /* background-color: aliceblue; */
+    height: 40%;
+}
+
+#coursename{
+    width: 200px;
+    height: 30px;
+    margin-left: 50px;
+    margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 7px;
+    padding-left: 10px;
+}
+
+#CR{
+    width: 200px;
+    height: 30px;
+    margin-left: 55px;
+    margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 7px;
+    padding-left: 10px;
+}
+
+
+
+#grades{
+    width: 200px;
+    height: 30px;
+    margin-left: 55px;
+    margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 7px;
+    padding-left: 10px;
+}
+
+#add_btn{
+    width: 120px;
+    height: 30px;
+    margin-left: 54px;
+    margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 7px;
+    padding-left: 10px;
+}
+
+#Resetall{
+     width: 120px;
+    height: 30px;
+    margin-left: 207px;
+    margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 7px;
+    padding-left: 10px;
+}
+
+#calculate{
+     width: 120px;
+    height: 30px;
+    margin-left: 220px;
+    margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 7px;
+    padding-left: 10px;
+}
+
+#calculate{
+    animation: transform 200ms ease;
+}
+
+#calculate:hover{
+    transform: scale(1.1);
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgb(244, 242, 242);
+}
+
+#Resetall{
+    animation: transform 200ms ease;
+}
+
+#Resetall:hover{
+    transform: scale(1.1);
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgb(244, 242, 242);
+}
+
+#add_btn{
+    animation: transform 200ms ease;
+}
+
+#add_btn:hover{
+    transform: scale(1.1);
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgb(244, 242, 242);
+}
+
+#remove_btn{
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    margin-left: 20px;
+    border-radius: 7px;
+}
+
+#remove_btn{
+    animation: transform 200ms ease;
+}
+
+#remove_btn:hover{
+    transform: scale(1.1);
+    /* border-radius: 15px; */
+    box-shadow: 0px 10px 20px rgb(244, 242, 242);
+}
+
+#line2
+{
+    width: 92%;
+    margin-left: 42px;
+    margin-top: 20px;
+    background-color: black;
+    height: 1px;
+}
