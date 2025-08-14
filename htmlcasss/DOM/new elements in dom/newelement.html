@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aur code</title>
+</head>
+<body style="background-color: #212121 ; color: #fff;">
+    <ul class = "language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addlan(langname){
+        const li = document.createElement('li')
+        li.innerHTML = `${langname}`;
+        document.querySelector(".language").appendChild(li)
+    }
+    addlan("python")
+    addlan("<b>Python</b>")
+
+    function addinanoptiway(langname){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(`${langname}`))
+        document.querySelector('.language').appendChild(li)
+    }
+addinanoptiway("hello")
+addinanoptiway("<b>Python</b>")
+
+//edit
+
+    // const seclang = document.querySelector('li:nth-child(2)');
+    // console.log(seclang)
+    // //  const s = seclang.innerHTML = "hsdih"
+    // //  console.log(s);
+    // const li = document.createElement('li')
+    // li.textContent = "kslhhd";
+    // seclang.replaceWith(li)
+
+//edit2
+
+    // const firstchild = document.querySelector("li:first-child")
+    // console.log(firstchild);
+    // const li = document.createElement('li');
+    // li.textContent = "sdsd"
+    // firstchild.replaceWith(li);
+
+//remove
+
+        // const lastlang = document.querySelector("li:last-child");
+        // lastlang.remove()
+</script>
+</html>
