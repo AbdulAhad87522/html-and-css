@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: #fff;">
+    <h2 style="width: 10px;">Amazing images</h2>
+    <div>
+        <ul id="images">
+           
+            <li><img width="200px" id="chairs" src="https://images.pexels.com/photos/33375535/pexels-photo-33375535.jpeg" alt="Chairs Setup"></li>
+            <li><img width="200px" id="leaves" src="https://images.pexels.com/photos/31742956/pexels-photo-31742956.jpeg" alt="Green Leaves"></li>
+            <li><a style="color: aliceblue;" href="https://www.google.com/search?q=google&rlz=1C1CHBF_en-GBPK1160PK1160&oq=&gs_lcrp=EgZjaHJvbWUqBggBEEUYOzIOCAAQRRgnGDsYgAQYigUyBggBEEUYOzIGCAIQRRg5MgYIAxBFGDwyBggEEEUYPDIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDIxODVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8" id="google">google</a></li>
+
+        </ul>
+    </div>
+</body>
+<script>
+    // document.getElementById("chairs").onclick = function(){
+    //     alert('chair clicked');
+    // }
+
+    // document.getElementById("chairs").addEventListener('click', function(e){
+    //     console.log('chiar clickes')
+    // })
+
+    // document.getElementById("images").addEventListener('click', function(e){
+    //     console.log('images clicked');
+    // })
+
+
+    document.addEventListener('click', function(e){
+        e.preventDefault();
+        // console.log("googlle clicked");
+        // e.stopPropagation();
+    })
+
+    document.querySelector("#images").addEventListener('click', function(e){
+        console.log(e.target.tagName)
+        if(e.target.tagName === 'IMG')
+    {
+        console.log(e.target.id )
+        let remove = e.target.parentNode
+        remove.remove();
+    }
+        
+       
+
+    })
+</script>
+</html>

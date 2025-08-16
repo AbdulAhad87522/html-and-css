@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async project</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="enter">enter</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    // setTimeout(function(){
+    //     console.log("ahad")
+    // },2000)
+
+    // const change = function(){
+    //         document.querySelector("h1").innerHTML = "best html series"
+    // }
+
+    // const changeme =  setInterval(change,2000)
+
+    // document.getElementById("submit").addEventListener("click", function(){
+    // clearTimeout(changeme)
+    //     console.log("stopped")
+    // })
+
+    var interval
+    const me = function(str){
+        console.log(str,  Date.now());
+    }
+
+    document.getElementById("enter").addEventListener('click', function(){
+   interval = setInterval(me,1000,"hi")
+
+    })
+
+    document.getElementById("stop").addEventListener('click', function(){
+    clearInterval(interval)
+    console.log("stopped")
+    })
+</script>
+</html>
