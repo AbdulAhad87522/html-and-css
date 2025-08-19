@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #image
+        {
+            height: 200px;
+            width: 200px ; 
+            /* background-color: black; */
+            border: 1px solid black;
+        }
+
+        #show{
+            margin-top: 30px;
+        }
+
+        #tasweer {
+            object-fit: cover;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="image">
+        <img id="tasweer" src="" alt="">
+        
+    </div>
+    <div id="butt">
+        <input id="show" type="submit" >
+    </div>
+</body>
+<script>
+    const showbutton = document.getElementById("show");
+    const tasweer = document.getElementById("tasweer");
+
+
+    const rewuesturl = 'https://api.github.com/users/Abdulahad87522'
+    const xhr =  new XMLHttpRequest();
+    xhr.open('GET', rewuesturl);
+    xhr.onreadystatechange = function(){
+       console.log( xhr.readyState);
+       if(xhr.readyState === 4)
+       {
+        const user = JSON.parse(this.responseText);
+        console.log(user);
+       }
+    }
+    xhr.send();
+
+    showbutton.addEventListener('click', function(){
+tasweer.src = "https://avatars.githubusercontent.com/u/180773077?v=4";
+    })
+</script>
+</html>
