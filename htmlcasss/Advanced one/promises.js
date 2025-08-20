@@ -32,39 +32,64 @@
 //     console.log("task 3 completted")
 // })
 
-const promisefour = new Promise(function(resolve , reject){
-    let error = false;
-    if(!error){
-        resolve({username: "ahad" , password: "1234"})
-    }
-    else{
-        reject('something is wrong')
-    }
-})
+// const promisefour = new Promise(function(resolve , reject){
+//     let error = false;
+//     if(!error){
+//         resolve({username: "ahad" , password: "1234"})
+//     }
+//     else{
+//         reject('something is wrong')
+//     }
+// })
 
-promisefour.then(function(str){
-    console.log(str)
-   return  str.username;
-})
-.then((srt) => {
-    console.log(srt)
-})
-.catch(function(str){
-    console.log(str)
-    console.log("reject executed")
-})
-.finally(function(){
-    console.log("finaaly")
-})
+// promisefour.then(function(str){
+//     console.log(str)
+//    return  str.username;
+// })
+// .then((srt) => {
+//     console.log(srt)
+// })
+// .catch(function(str){
+//     console.log(str)
+//     console.log("reject executed")
+// })
+// .finally(function(){
+//     console.log("finaaly")
+// })
+ 
 
-const promisefive = new promise(function(resolve, reject){
-    let error = true;
-    if(!error){
-        resolve({username:"Javascript" , password:"0987"})
-    }
-    else{
-        reject("js error ")
-    }   
-})
+// async function getusers() {
+//     try{
+//         const responce = await fetch('https://jsonplaceholder.typicode.com/users');
+//         // console.log(responce    )
+//     const data = await responce.json();
+//     console.log(data)
+//     }
+//     catch (error){
+//         console.log(error)
+//     }
+// }
 
-promisefive.then()
+// getusers(); 
+
+// const promi = new Promise(function(resolve , reject){
+//     const url = 'https://jsonplaceholder.typicode.com/users';
+//     const data = url.json()
+//     console.log(data);
+// })
+
+// promi.then(function(){
+//     console.log("data fetched")
+// })
+
+fetch('https://jsonplaceholder.typicode.com/users')
+.then((respon) => {
+    const data =  respon.json()
+    console.log(data);
+})
+// .then((da) => {
+//     console.log(da)
+// })
+.catch((error) => {
+    console.log(error)
+})
