@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure aur chai</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // function init(){
+    //     let name = "morzilla";
+    //     function showname(){
+    //         console.log(name)
+    //     }
+    //     showname()
+    // }
+
+    // function outer(){
+    //     var username = "ahhad"
+    //     function inner(){
+    //         console.log("inner",username)
+    //     }
+    //     inner();
+    // }
+    // outer()
+    // console.log("outer",username)
+
+    function outer(){
+        let name = "morzilla"
+        function inner(){
+            console.log(name);
+        }
+        return inner
+    }
+
+    const func = outer()
+    func();
+    </script>
+</html>
