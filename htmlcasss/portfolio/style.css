@@ -8,43 +8,9 @@ html,body {
     width: 100%;
 }
 
-body{
-}
-
-#page1{
-     height: 100%;
-    width: 100%;
-        background-color: rgb(11, 139, 231);
-
-}
-
 #header{
-    width: 100%;
-    height: 30%;
-    background-color: aqua;
-    /* margin: 20px; */
-    padding-left: 20px;
-    padding-top: 10px;
-    border: 1px solid black;
-    display: flex;
-}
-
-#navbar{
-    padding-left: 100px;
-    display: flex;
-    gap: 20px;
-}
-
-#picture{   
-        padding-top: -30px;
-    height: 180px;
-    width: 180px;   
-    object-fit: cover;
-    border-radius: 49%;
-}
-
-#page2{
-     height: 100%;
-    width: 100%;    
-    background-color: rgb(99, 94, 248);
+    height: 40%;
+    width: 80%;
+    margin-left: 20px;
+    border: 2px solid black;
 }
