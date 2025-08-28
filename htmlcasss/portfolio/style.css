@@ -9,8 +9,37 @@ html,body {
 }
 
 #header{
-    height: 40%;
+    height: 100px;
     width: 80%;
-    margin-left: 20px;
+    margin-left: 130px;
     border: 2px solid black;
+    
+}
+
+#header nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 350px;
+   
+}
+
+.text{
+    margin-top: -10px;
+     margin-left: 40px;
+}
+
+#body{
+    border: 2px solid black;
+    height: 520px;
+    /* width: 100%; */
+}
+
+#body_content{
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+#description{
+    font-size   : 20px;
 }
